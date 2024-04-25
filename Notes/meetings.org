@@ -1,0 +1,88 @@
+#+title: Open Source and Open Data Research Group Meeting Notes
+#+author: Joseph Hallett, François Dupressoir, Awais Rashid, Miquel Perello Nieto and Inah Omoronyia
+
+* <2024-04-25 Thu 11:00> Inaugral Meeting
+
+- Joseph is working group leader.
+
+- What do we want to do?
+  - Why do we care? What is /open/ and /good/ research and why is it desirable
+    - Well because funders like it... as well as researchers
+    - What are the requirements for it from:
+      - funders?
+      - conferences?
+      - researchers?
+  - Defaults as part of guidance
+    - What's the benefit of doing various things?
+    - What's the benefit of various licenses?
+
+- Are we making research /open/ or /reproducible/ and are they really the same thing?
+
+- What sort of things are there and whose doing the current guidance?
+  - Datasets :: ESRC
+  - Sourcecode :: Github I guess?
+  - Artefacts :: ???
+  - ? Study design :: OSF
+
+- Could we provide a reference implementation for how to do all this stuff?
+  - Ooh that sounds like a good idea!
+  - ...and we should probably write a paper about how we came to it!
+
+- There is a Git repo for everything on the school Github account
+  - Is Github /really/ open source though?
+  - We should really put all our notes in it.
+    - See _this_.
+
+- We should review whats the current /state of the art/
+  - Practices
+  - Processes
+  - Training initiatives
+  - ...isn't this basically what we were saying earlier about looking at whats in the current guidance?
+  - What about things like Jupyter notebooks?
+    - Code goes in PURE
+    - Data goes in RSDF
+    - Isn't it frustrating there is no single source for this?
+
+- Lets put all the notes from this working group online!
+  - Open Source our process for designing what open research should look like!
+  - Eat our own dog food!
+  - But should we really do that? Who cares?
+    - You don't have to look at it but if we're gonna recommend openness we ought to show our working?
+  - We could do an /auto ethnographic study/ of how to do OS data sharing initiatives
+    - And publish it as a CSCW paper! :-D
+    - And in the spirit of dog fooding we should pre register it.
+      - These notes are the semi structured input for how we did it!
+
+- But should we /really/ make everything accessible to everyone?
+  - You don't have to push to Git...
+  - Other working groups don't make everything accessible, just end product...?-
+  - Could we do /Chatham house/ rules?
+  - We don't want to have detailed minutes...
+    - Agreed: largely pointless
+  - Keeping everything may slow us down
+    - We could use Github features to track tasks and issues
+      - Or a big org-mode file.
+        - Members of working group:
+          - 2 Emacs users
+          - 2 Vim users
+          - 1 VS code user
+  - Jo largely favours making everything open
+    - But he may be in the /Qowat Milat/...
+      
+
+** TODO François to hand Git things over                          :François:
+** TODO Awais to set up weekly meetings                              :Awais:
+Fortnightly, til term picks up proper for next year.
+** DONE Jo to stick notes in Git                                        :Jo:
+** TODO Go look at dataset requirements for open source              :Awais:
+** TODO Go look at OSF pre-registration requirements              :François:
+** TODO Go look at artefact requirements at conferences                 :Jo:
+** TODO Go look at what licenses are recommended for research       :Miquel:
+** TODO Go look at funders requirements                               :Inah:
+
+** Next time!
+
+- We should think about building a big table aligning what is needed for Open Source and Open Research and what does what
+  - And mapping it
+  - And Jo should probably do it
+- We should work out how to pre-register this whole experiment on OSF

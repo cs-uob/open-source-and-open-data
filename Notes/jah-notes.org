@@ -1,0 +1,49 @@
+#+title: Jo's notes
+
+* Artefact evaluation criteria
+
+** ACM Guidelines
+
+[[https://www.acm.org/publications/policies/artifact-review-and-badging-current]]
+
+- Repeatability :: Same team, same experimental setup
+- Reproducibility :: Different team, same experimental setup
+- Replicability :: Different team, different experimental setup
+
+  
+Three sets of badges:
+
+- Artifacts evaluated :: someone has checked that there is an
+  inventory of whats in the data and it is consistent with what is in
+  the paper.  Ideally it ought to reproduce everything, and their
+  ought to be a script to generate the results.  A shinier /resuable/
+  badge is awarded if it's also documented properly and not minimum
+  effort.
+- Artifacts available :: You stuck it on GitHub and got a DOI.
+- Results validated :: Awarded posthoc for reproduction or replication.
+
+*** Review procedures
+
+Seems to be completely ad-hoc but the telling quote is:
+
+#+begin_quote
+``We believe that it is still too early to establish more specific
+guidelines for artifact and replicability review. Indeed, there is
+sufficient diversity among the various communities in the computing
+field that this may not be desirable at all.''
+#+end_quote
+
+** How to survive an artifact evaluation with HotCRP
+
+#+begin_src bibtex
+  @Unpublished{demetrescu2015survive,
+    author =       {Camil Demetrescu},
+    title =        {How to survive an artifact evaluation with HotCRP},
+    note =         {Google Docs note.},
+    year =      2015,
+    url = {https://docs.google.com/document/d/1_Fq4mq5VJs-sMnBs39rTCEDWktb_qhcSeL3d9Kr4cD0/edit#heading=h.pvs9x3i3frny}}
+#+end_src
+
+Guide for how to set up processes using HotCRP.  Not much more than
+give me a URL and a hash, and provide some bare bones (2 lines of and
+HTTP form) descriptions.

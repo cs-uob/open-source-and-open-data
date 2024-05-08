@@ -1,1 +1,1 @@
-# open-source-and-open-data
+# Open Source and Open Data Working Group

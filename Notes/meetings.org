@@ -1,7 +1,7 @@
 #+title: Open Source and Open Data Research Group Meeting Notes
 #+author: Joseph Hallett, François Dupressoir, Awais Rashid, Miquel Perello Nieto and Inah Omoronyia
 
-* <2024-04-25 Thu 11:00> Inaugral Meeting
+* <2024-04-25 Thu> Inaugral Meeting
 
 - Joseph is working group leader.
 
@@ -69,20 +69,103 @@
   - Jo largely favours making everything open
     - But he may be in the /Qowat Milat/...
       
-
-** TODO François to hand Git things over                          :François:
-** TODO Awais to set up weekly meetings                              :Awais:
+** DONE François to hand Git things over                          :François:
+** DONE Awais to set up weekly meetings                              :Awais:
 Fortnightly, til term picks up proper for next year.
 ** DONE Jo to stick notes in Git                                        :Jo:
-** TODO Go look at dataset requirements for open source              :Awais:
-** TODO Go look at OSF pre-registration requirements              :François:
-** TODO Go look at artefact requirements at conferences                 :Jo:
-** TODO Go look at what licenses are recommended for research       :Miquel:
-** TODO Go look at funders requirements                               :Inah:
-
 ** Next time!
 
 - We should think about building a big table aligning what is needed for Open Source and Open Research and what does what
   - And mapping it
   - And Jo should probably do it
 - We should work out how to pre-register this whole experiment on OSF
+
+* <2024-05-24 Fri> Meeting #2: Scoping things out
+
+- Meeting held online, because it's half term.
+- Inah away travelling.
+
+** DONE Go look at dataset requirements for open source              :Awais:
+
+- EPSRC's guidance is a bit /wishy-washy/
+- ERC have the best dataset guidance
+  - [[https://www.ukri.org/publications/esrc-research-data-policy/][ESRC Research Data Policy]]
+  - UK data archive and Bristol's guidance are derivatives of the ERC's guidance
+- What are we doing here? What's our /goal/?
+  - We should be producing templates
+    - These are the typical things you need to do for open science
+    - Here are specific things you need to if you're doing /X/.
+    - DOI needed for citation
+  - ?? I thought this was what we agreed ??
+  
+** DONE Go look at what licenses are recommended for research       :Miquel:
+- [[https://tailor-uob.github.io/new_ways_of_publishing/open-research/index.html][Open Research guidelines]] have a flowchart that we should probably link to.
+- [[https://choosealicense.com/][Tool for choosing an opensource license]]
+- Awais asked if funders sometimes require a licence?
+  - Suspect people pick the same licenses always because they're the ones that have been used in the past
+    - Is it our job to change that though?
+  - Nation Security Investment Act and EPSRC Trusted research guidelines have requirements about licenses
+    - The RED team at Bristol are useful to talk to about this
+- Are there different licenses for code and data?
+  - Don't seem to be ones for both or they're very Creative Commons-y
+  - Open Data Commons
+  - Governmental licenses for data
+    
+** DONE Go look at OSF pre-registration requirements              :François:
+- They're completely unintelligible
+  
+** DONE Go look at artefact requirements at conferences                 :Jo:
+*** ACM Guidelines
+
+[[https://www.acm.org/publications/policies/artifact-review-and-badging-current]]
+
+- Repeatability :: Same team, same experimental setup
+- Reproducibility :: Different team, same experimental setup
+- Replicability :: Different team, different experimental setup
+
+  
+Three sets of badges:
+
+- Artifacts evaluated :: someone has checked that there is an
+  inventory of whats in the data and it is consistent with what is in
+  the paper.  Ideally it ought to reproduce everything, and their
+  ought to be a script to generate the results.  A shinier /resuable/
+  badge is awarded if it's also documented properly and not minimum
+  effort.
+- Artifacts available :: You stuck it on GitHub and got a DOI.
+- Results validated :: Awarded posthoc for reproduction or replication.
+
+*** Review procedures
+
+Seems to be completely ad-hoc but the telling quote is:
+
+#+begin_quote
+``We believe that it is still too early to establish more specific
+guidelines for artifact and replicability review. Indeed, there is
+sufficient diversity among the various communities in the computing
+field that this may not be desirable at all.''
+#+end_quote
+
+*** How to survive an artifact evaluation with HotCRP
+
+#+begin_src bibtex
+  @Unpublished{demetrescu2015survive,
+    author =       {Camil Demetrescu},
+    title =        {How to survive an artifact evaluation with HotCRP},
+    note =         {Google Docs note.},
+    year =      2015,
+    url = {https://docs.google.com/document/d/1_Fq4mq5VJs-sMnBs39rTCEDWktb_qhcSeL3d9Kr4cD0/edit#heading=h.pvs9x3i3frny}}
+#+end_src
+
+Guide for how to set up processes using HotCRP.  Not much more than
+give me a URL and a hash, and provide some bare bones (2 lines of and
+HTTP form) descriptions.
+** LATE Go look at funders requirements                               :Inah:
+** TODO Start standard paperwork for preregistration              :Jo:Awais:
+** TODO Create initial template of research access plan              :Awais:
+** TODO Check with REPHRAIN admin if theres a current template       :Awais:
+** TODO Ask why people picked licenses for data before              :Miquel:
+** Next time!
+We are going to preregister the study we want to run and figure out how to actually do this.
+
+- <2024-06-07 Fri> Meeting to be skipped, because it clashes with the cyber poster day.

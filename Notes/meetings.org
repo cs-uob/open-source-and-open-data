@@ -162,6 +162,83 @@ give me a URL and a hash, and provide some bare bones (2 lines of and
 HTTP form) descriptions.
 ** LATE Go look at funders requirements                               :Inah:
 ** TODO Start standard paperwork for preregistration              :Jo:Awais:
+
+#+begin_quote
+*Jo*:
+Wotcha!  We’re meant to be registering our study on how to register
+studies on Friday and we’ve got an action on us to draft a method and
+do some of the boiler plate stuff.  Do you know what exactly we’ll
+need then I can do a quick draft tomorrow and you can edit it?
+
+*Awais*:
+I have been too over-run with other things to think about this in
+detail. I would see this as auto-ethnography - where we are doing the
+work and also collecting data through observations and notes. We could
+present it in the style of ethnographic research but I would suggest
+we collect data (we have meeting notes but can also collect
+observations/reflections as we conduct particular tasks, e.g.,
+registering the study on OSF is itself one of those tasks … yes gets
+very meta ). I would say once we have the data, we do a thematic
+analysis (could do full blown GT but probably not ideal timewise) and
+thematic analysis works better here IMO as we are looking at this
+through the lens of open data and open source research artefacts. So
+we do already have a particular stance. If we do go for thematic
+analysis, we can just use adapt an existing description of
+that. Suggest we follow Braun and Clarke to keep things sensible. I’d
+suggest we are clear which incarnation of their approach (latest
+book?).
+
+*Jo*:
+That implies ive read their latest book ;-) but my infinite reading
+list is always looking for more… alright will put something together
+and agree full gt not needed.  Reflective log very much way to go
+#+end_quote
+
+At this point I went and read (reread?) their papers (/Using thematic
+analysis in psychology/ (2006), /Reflecting on reflexive thematic
+analysis/ (2019) and /One size fits all?/ (2021)).
+
+I also read the [[https://www2.sigsoft.org/EmpiricalStandards/docs/standards?standard=MetaScience#][ACM's Empirical Standards for Metascience]].
+
+*** Our method
+
+We are going to be running an autoethnographic study looking at how a working group exploring how to do open science came up with some guidelines for how to do open science.  Our method for analysis will be following Braun and Clarke's rough method for reflexive thematic analysis, taking the approach set out in their 2006 paper detailing the method with adaptations to bring it in line with the current thinking in their 2021 paper and the current /reflexive/ method.
+
+**** What counts as a theme?
+Our process, struggles and realisations and mental models as we attempt to work out how to do open science and open research.  Our themes will capture our beliefs about how this should be done, and what we found hard while attempting the process.  As such, they will form stories about what to do and how to avoid problems.
+
+**** What is the data set?
+A collection of notes, logs, minutes and other ephemera collected as we went about this process.
+
+**** Are we doing inductive or theoretical thematic analysis?
+We are doing theoretical thematic analysis as we are all active researchers, some of whom who do usability research and all of whom have created studies before.  We are clearly not impartial and have an idea about what we're looking for. The entire study is grounded in our experience of doing science and our findings describe the struggles we faced, and in capturing that experience and documenting what we learned as scientists in the field. 
+
+**** Semantic or latent coding?
+We will be aiming to code semantically, coding what we see rather than what we interpret as being the cause for something being hard and the struggles.  Our themes, as we develop them, may start to tell the stories as to what we felt was the causes for our issues and our guidance, but at the initial coding level we will aim to capture what we saw and did.
+
+**** Realist or constructivist thematic analysis?
+Since this is autoethnographic research for other computer science researchers attempting to do open science, we are taking a realist approach, though we accept that the whole thing is grounded in our reality as computer science researchers.
+
+**** What version of thematic analysis is this?
+It's predominantly a reflexive approach.  We're not going to be calculating kappas (who would second code anyway... it could never be impartial).  We are looking to clarify the struggles and our thoughts on the process of creating open science guidelines.  We will end up creating and presenting a codebook, but the output is what we learned from that process.
+
+**** ACM Empirical Standards for Meta-Science Attributes
+
+***** Essential Attributes
+- [X] Presents information useful for other researchers
+- [X] Makes recommendations for future research
+- [X] Presents clear, valid arguments supporting recommendations (on the basis of our thematic analysis).
+
+***** Desirable Attributes
+- [ ] Synthesizes related work from reference disciplines
+- [X] Provides insight specfically for software engineering
+- [ ] Results integrated back into prior theory or research
+- [X] Develops helpful artefacts (guidance and checklists and templates)
+
+***** Extraordinary Attributes
+- [X] Includes an empirical study (this is what we're doing)
+- [ ] Quantitative simulation illustrating methodological issues
+
 ** TODO Create initial template of research access plan              :Awais:
 ** TODO Check with REPHRAIN admin if theres a current template       :Awais:
 ** TODO Ask why people picked licenses for data before              :Miquel:

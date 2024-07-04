@@ -246,3 +246,13 @@ It's predominantly a reflexive approach.  We're not going to be calculating kapp
 We are going to preregister the study we want to run and figure out how to actually do this.
 
 - <2024-06-07 Fri> Meeting to be skipped, because it clashes with the cyber poster day.
+* <2024-06-21 Fri> Meeting #3 Preregistration attempt 1
+Inah pulled out; Awais sends apologies.
+
+Attempted to preregister study.  See transcript.
+
+[[file:../preregistration/01-preregistration.txt][Transcript of session.]]
+[[file:../preregistration/01-preregistration.mov][Screen recording of session.]]
+
+* <2024-07-05 Fri> Meeting #4 Preregistration attempt 2
+Awais sends apologies.

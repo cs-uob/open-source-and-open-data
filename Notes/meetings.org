@@ -252,7 +252,7 @@ Inah pulled out; Awais sends apologies.
 Attempted to preregister study.  See transcript.
 
 [[file:../preregistration/01-preregistration.txt][Transcript of session.]]
-[[file:../preregistration/01-preregistration.mov][Screen recording of session.]]
+[[file:../preregistration/01-preregistration.mp4][Screen recording of session.]]
 
 * <2024-07-05 Fri> Meeting #4 Preregistration attempt 2
 Awais sends apologies.

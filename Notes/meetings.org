@@ -256,3 +256,9 @@ Attempted to preregister study.  See transcript.
 
 * <2024-07-05 Fri> Meeting #4 Preregistration attempt 2
 Awais sends apologies.
+
+[[file:../preregistration/02-preregistration.txt][Transcript of session.]]
+[[file:../preregistration/02-preregistration.mp4][Screen recording of session.]]
+
+* <2024-08-02 Fri> Meeting #5 Sanity Checking
+Online.  Miquel sends apologies.

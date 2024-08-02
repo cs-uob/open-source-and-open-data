@@ -1,3 +1,4 @@
 01-preregistration.mov filter=lfs diff=lfs merge=lfs -text
 01-preregistration-compressed.mp4 filter=lfs diff=lfs merge=lfs -text
 01-preregistration.mp4 filter=lfs diff=lfs merge=lfs -text
+02-preregistration.mp4 filter=lfs diff=lfs merge=lfs -text

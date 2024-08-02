@@ -1,0 +1,8 @@
+#! /bin/sh
+# Make a video a reasonable size
+infile="${1:?Missing input video. Usage: shrink-video infile outfile}"
+outfile="${2:?Missing output file. Usage: shrink-video infile outfile}"
+
+(command -v ffmpeg >/dev/null) || (echo "Can't find ffmpeg" && exit 1);
+
+ffmpeg -i "${infile}" -vcodec libx265 -crf 20 -vf scale=720:480 "${outfile}"

@@ -1,0 +1,51 @@
+#! /usr/bin/env python
+# Apply normalisation
+
+from sys import argv
+from sys import stdout
+import csv
+from collections import Counter
+from collections import defaultdict
+
+normalisation = {}
+writer = csv.writer(stdout, dialect='unix')
+
+def import_normalisation(infile):
+    global normalisation
+    reader = csv.reader(infile,dialect='unix')
+    for line in reader:
+        original = line[0]
+        try:
+            new = line[1].strip()
+            if new != '':
+                normalisation[original] = new
+        except IndexError:
+            pass
+
+def print_coding(infile):
+    global normalisation
+    global writer
+    filereader = csv.reader(infile, dialect='unix')
+    for row in filereader:
+        the_codes = set()
+        text = row[0] or ''
+        codes = row[1] or ''
+        for code in codes.split(","):
+            code = code.strip().lower()
+            substitution = normalisation.get(code,code)
+            if substitution != '-':
+                the_codes.add(code)
+        writer.writerow([text,"|".join(sorted(the_codes))])
+        
+def print_codes(counts):
+    for code, count in counts.items():
+        if code != '':
+            print("%d\t%s" % (count, code))
+    
+if __name__=='__main__':
+    with open(argv[1]) as file:
+        import_normalisation(file)
+        
+    for arg in argv[2:]:
+        with open(arg) as file:
+            print_coding(file)

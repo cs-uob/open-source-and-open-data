@@ -1,0 +1,2 @@
+#! /usr/bin/env bash
+cat *.csv | rg -i "${1:?query}" -A 3 -B 3 --color=always | less -R

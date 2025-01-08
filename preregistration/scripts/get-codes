@@ -3,6 +3,7 @@
 
 from sys import argv
 import csv
+import re
 from collections import Counter
 
 def extract_codes(infile):
@@ -10,7 +11,7 @@ def extract_codes(infile):
     filereader = csv.reader(infile, dialect='unix')
     for row in filereader:
         codes = row[1] or ""
-        for code in codes.split(","):
+        for code in re.split(r'[,|]', codes):
             code = code.strip().lower()
             results[code] += 1
     return results

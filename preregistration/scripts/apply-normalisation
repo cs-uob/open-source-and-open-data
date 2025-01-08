@@ -3,6 +3,7 @@
 
 from sys import argv
 from sys import stdout
+import re
 import csv
 from collections import Counter
 from collections import defaultdict
@@ -30,7 +31,7 @@ def print_coding(infile):
         the_codes = set()
         text = row[0] or ''
         codes = row[1] or ''
-        for code in codes.split(","):
+        for code in re.split(r'[,|]', codes):
             code = code.strip().lower()
             substitution = normalisation.get(code,code)
             if substitution != '-':

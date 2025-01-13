@@ -1,0 +1,90 @@
+digraph axial {
+    graph [overlap=false, rankdir=LR]
+    node [shape=record]
+
+    "DISCUSSION" [label="Discussion|Discussion around specific sections of the preregistration form"]
+    "DISCUSSION" -> {
+	"hypothesis"
+	"sample size"
+	"blinding"
+	"variables"
+	"license"
+	"inferrence"
+	"measuring"
+	"direction"
+	"treatment"
+	"assignment"
+	"subjects"
+	"website"
+	"approval"
+	"data"
+    }
+
+    "METHODOLOGY" [label="Methodology|Discussion about the methods we are using to understand usability challenges with preregistration"]
+    "METHODOLOGY" -> {
+	"process"
+	"meta"
+	"qual"
+	"ethics"
+	"methods"
+	"anonymity"
+	"verification"
+	"reproduction"
+    }
+
+    "THINKING" [label="Thinking|Discussion about why were filling in the form in a certain way"]
+    "THINKING" -> {
+	reasoning
+	discussion
+	questioning
+	argument
+	confidence
+	conclusion
+	bickering
+	answering
+	realization
+	exposition
+	answering
+	reflection
+	analogy
+	humor
+    }
+
+    "USABILITY" [label="Usability|Signs that thinks might not be as usable as they might be"]
+    "USABILITY" -> Negative -> {
+	frustration
+	confusion
+	annoyance
+	laziness
+	criticism
+	missing
+	correctness
+	saving
+    }
+    saving -> foreshadowing
+    "USABILITY" -> Positive -> {
+	good
+	explaining
+    }
+    "USABILITY" -> {
+	experience
+	rote
+	usability
+    }
+
+    "PROCESS" [label="Process|Data entry and editing"]
+    "PROCESS" -> {
+	editing
+	writing
+	backtracking
+	description
+	catchup
+	curiosity
+	exploring
+	reading
+	pragmatism
+	"access control"
+    }
+
+
+}

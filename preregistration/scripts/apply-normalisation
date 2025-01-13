@@ -15,7 +15,7 @@ def import_normalisation(infile):
     global normalisation
     reader = csv.reader(infile,dialect='unix')
     for line in reader:
-        original = line[0]
+        original = line[0].strip()
         try:
             new = line[1].strip()
             if new != '':
@@ -35,7 +35,7 @@ def print_coding(infile):
             code = code.strip().lower()
             substitution = normalisation.get(code,code)
             if substitution != '-':
-                the_codes.add(code)
+                the_codes.add(substitution)
         writer.writerow([text,"|".join(sorted(the_codes))])
         
 def print_codes(counts):

@@ -1,0 +1,55 @@
+#! /usr/bin/env python
+# Extract codes from a CSV file
+
+from sys import argv
+import csv
+import re
+from collections import Counter
+import numpy as np
+import seaborn as sb
+import matplotlib.pyplot as plt
+
+def extract_codes(infile):
+    results = Counter()
+    filereader = csv.reader(infile, dialect='unix')
+    lines = []
+    for row in filereader:
+        line = []
+        codes = row[1] or ""
+        for code in re.split(r'[,|]', codes):
+            code = code.strip().lower()
+            if code != '':
+                line.append(code)
+            results[code] += 1
+        line.sort()
+        if line != []:
+            lines.append(line)
+    results = [x for x in list(results.keys()) if x != '']
+    results.sort()
+    return results, lines
+
+def create_heatmap(keys, lines):
+    len_keys = len(keys)
+    map = np.zeros((len_keys, len_keys))
+    for line in lines:
+        for code1 in line:
+            for code2 in line:
+                map[keys.index(code1)][keys.index(code2)] += 1
+    for i in range(len_keys):
+        total = map[i][i]
+        for j in range(len_keys):
+            map[i][j] /= (1.0*total)
+    return map
+    
+            
+if __name__=='__main__':
+    keys = None
+    lines = None
+    with open(argv[1]) as file:
+        keys, lines = extract_codes(file)
+    map = create_heatmap(keys, lines)  
+    plt.subplots(figsize=(15,15))
+    plot = sb.heatmap(map, square=True, xticklabels=keys, yticklabels=keys)
+    plot.set_xlabel("Occurs with")
+    plot.set_ylabel("Code")
+    plot.get_figure().savefig('heatmap.png')

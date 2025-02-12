@@ -262,3 +262,49 @@ Awais sends apologies.
 
 * <2024-08-02 Fri> Meeting #5 Sanity Checking
 Online.  Miquel sends apologies.
+
+[[file:../preregistration/03-preregistration.txt][Transcript of session.]]
+[[file:../preregistration/03-preregistration.mp4][Screen recording of session.]]
+
+* <2025-02-12 Wed> Meeting #6 The data has been coded
+
+Coding looks like what we felt as doing it.  That we're trying to shoehorn OSF questions into qual methods and it doesn't fit particularly well.
+
+Why aren't we analyzing all the discussions we had done previously, and just focussing on the OSF form.
+
+We could analyze the other stuff... from the /meetings/.
+We could ask for help analysing... Andy?
+- How many hours, Awais would like to pay.
+
+
+CSCW
+- Starting to insist you cite CSCW papers...
+- Should we send to CHI instead?
+- Don't want to encourage bad science
+
+Cross cutting guidance from our positions then with our coding
+- Contrast with other conferences
+- Other
+
+Analysis of our conversation and the crossing across.
++ What venues are guiding
++ What are people already doing
+  - Reproducible by whom and how?
+    - Repeatability vs reproducibility...
+
+Funding bodies require data stored for 10 years
+- But how do you access it for verification
+- And under what conditions?
+  - I want to verify it but can I actually do it?
+- How do you do it for qual... do we more care more that the researchers train of thought 
+
+
+Classes of artefacts with different guidance
+- Open Science is very explicit about pure quant data
+- What about qual and software?
+- Reproducible code artefacts quality tends to be super sketchy... what is being claimed is really
+
+We should have some guidance that they can have to stick on their wiki
+- No more than questions to ask yourself
+- But the school should be funding proper research with this as the start of it.
+  - Enhancing research culture funding.

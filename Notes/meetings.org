@@ -268,19 +268,21 @@ Online.  Miquel sends apologies.
 
 * <2025-02-12 Wed> Meeting #6 The data has been coded
 
-Coding looks like what we felt as doing it.  That we're trying to shoehorn OSF questions into qual methods and it doesn't fit particularly well.
+Thematic analysis
++ Coding looks like what we felt as doing it.  That we're trying to shoehorn OSF questions into qual methods and it doesn't fit particularly well.
++ Why aren't we analyzing all the discussions we had done previously, and just focussing on the OSF form.
++ We could analyze the other stuff... from the /meetings/.
++ We do not have time to do such analysis. 
++ We could ask for help analysing... Andy?
++ How many hours, Awais would like to pay.
 
-Why aren't we analyzing all the discussions we had done previously, and just focussing on the OSF form.
-
-We could analyze the other stuff... from the /meetings/.
-We could ask for help analysing... Andy?
-- How many hours, Awais would like to pay.
-
-
-CSCW
-- Starting to insist you cite CSCW papers...
-- Should we send to CHI instead?
-- Don't want to encourage bad science
+Publication considerations
++ CSCW (Conference on Computer-Supported Cooperative Work and Social Computing)
+  - Starting to insist you cite CSCW papers as a publication requirement
+  - Other conferences and publishers are asking the same
+  - We do not want to encourage bad science
++ CHI (Conference on Human Factors in Computing Systems, international conference of Human-Computer Interaction)
+  - Submission deadline around September 2025
 
 Cross cutting guidance from our positions then with our coding
 - Contrast with other conferences
@@ -291,6 +293,9 @@ Analysis of our conversation and the crossing across.
 + What are people already doing
   - Reproducible by whom and how?
     - Repeatability vs reproducibility...
++ The idea of using containerised code that runs (repeatability), but that can be inspected (reproducibility).
+  - People may already do that, but not perfectly
+  - It is very hard to do this properly
 
 Funding bodies require data stored for 10 years
 - But how do you access it for verification
@@ -305,6 +310,6 @@ Classes of artefacts with different guidance
 - Reproducible code artefacts quality tends to be super sketchy... what is being claimed is really
 
 We should have some guidance that they can have to stick on their wiki
-- No more than questions to ask yourself
+- No more than a list of questions to ask yourself
 - But the school should be funding proper research with this as the start of it.
   - Enhancing research culture funding.

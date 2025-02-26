@@ -313,3 +313,15 @@ We should have some guidance that they can have to stick on their wiki
 - No more than a list of questions to ask yourself
 - But the school should be funding proper research with this as the start of it.
   - Enhancing research culture funding.
+
+* <2025-02-26 Wed>
+
+3 bullet points for what Andy is going to do
+
+Start date: 17 march
+End date: 17 june
+
+1. Thematically analysing of meeting notes.
+2. Analysing conference research artefact guidance and requirements (ACM/IEEE/USENIX/NDSS/ICSE/IACR).
+3. Synthesizing 1 & 2 with existing thematic analysis of OSF transcripts.
+4. Critically analyzing the findings in the light of the wider body of work on open science.

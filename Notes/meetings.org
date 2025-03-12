@@ -325,3 +325,43 @@ End date: 17 june
 2. Analysing conference research artefact guidance and requirements (ACM/IEEE/USENIX/NDSS/ICSE/IACR).
 3. Synthesizing 1 & 2 with existing thematic analysis of OSF transcripts.
 4. Critically analyzing the findings in the light of the wider body of work on open science.
+
+
+* <2025-03-12 Wed>
+
+- We volunteered to be part of this working group on open science
+- As volunteers we want to have a decision on what the working group adds to our research
+- We had a go at pre-registering a study
+- We found that we can model the data captured during the pre-registration
+- But most of the pre-registration seems to be focus to quantitative analysis, rather than qualitative and thematic analysis
+- As a summary:
+  - We have idea of what open science is, but there are multiple ways to apply it
+  - Our idea is to follow some guidelines in how to do open science
+  - Reflect back with thematic analysis what worked and what is missing
+- The university may have good guidelines, but not specific to each field
+- We are interested in computer science
+- The process that we have followed seems to be focused on quantitative analysis
+- There are specific guidelines to specific tasks
+- There is a lack of understanding from reviewers and what is open science, as not everything can be disclosed
+- Part of our collaboration would be to draft a paper and publish it
+- We found some issues with the pre-registration not saving partial fields
+- We discussed qualitative and quantitiative studies, but what about a third type of research mathematical theoretical research
+- Summary of discussion
+  - (1) form of analyisis
+  - (2) synthesis of the analysis into potential guidelines for comptuer science
+  - (3) potential paper
+- The new tasks are about reviewing the current analysis that we have done in the past
+- We decided to do an authoethnography study about our pre-registration process
+- Major conferences are requesting open research as part of the submissions
+- For example OSF registrations required
+- Possible title: scientists are not the enemy
+- We are told to do open science, guidelines from university, funding bodies
+- We do research in different forms (e.g. quant, qual, theoretical work)
+- Usually the guidelines are too general
+- We find difficulties adapting the guidelines to our use cases
+- Conferences encourage to do open research but reviewers may not be aligned with the concept of open research
+- Our job is to do good science
+- We do not want students to delay their studies, but we are happy to extend them with side projects that contribute to their research
+- Discussion about adding more documentation to the repository, including how to run the code and package versions
+- We have previously analysed the transcripts from the pre-registration process, but we want to analysie the meeting notes as well
+

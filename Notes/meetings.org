@@ -365,3 +365,10 @@ End date: 17 june
 - Discussion about adding more documentation to the repository, including how to run the code and package versions
 - We have previously analysed the transcripts from the pre-registration process, but we want to analysie the meeting notes as well
 
+
+* <2025-04-23 Wed>
+
+- Awais and Miquel absent.
+- Andy making good progress.
+- Recommended a few more conferences to look at but that we'd like to wrap this up soon.
+  

@@ -1,0 +1,32 @@
+#+title: Open Science Advice for Computer Scientists
+#+author: Joseph Hallett
+
+Open Science ensures that our research is held to the highest standards for accountablity and reproducibility, and is a best practice for scientific researchers encouraged by the University of Bristol.
+
+* Why do we care?
+
+* What is this based on?
+
+This guidance is based on our experiences as a group of researchers who do different kinds of research in computer science, including quantitative, qualitative research, engineering and proofs.  Advice is formed from a synthesis of existing guidance from top conferences as well as our own attempts to preregister studies and carry out open research.
+
+* What help is already out there?
+
+Unfortunately significant variation between subfields make it impossible to provide School-wide guidance.
+
+There is a lot of general guidance for researchers---including from The University of Bristol[fn:1]---saying that we /should/ do open science but very little explaining how precisely we ought to be doing it.  Even established /best practices/ do not always make sense when applied to the diverse methods that computer scientists use.
+
+Preregistering studies makes little sense when a researcher's primary output is mathematical proofs, and whilst it makes more sense for a qualitative research existing tools [fn:2] assume that you will be doing purely quantitative work.
+
+* What should you do?
+
+- Make analysis reproducible
+- Don't cheat
+- Share as much as you can
+
+* How might you do it?
+
+* Footnotes
+
+[fn:1] See [[ https://www.bristol.ac.uk/staff/researchers/open-research/open-research-policy/]]
+
+[fn:2] See [[https://osf.io/]]

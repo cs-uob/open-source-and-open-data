@@ -371,4 +371,11 @@ End date: 17 june
 - Awais and Miquel absent.
 - Andy making good progress.
 - Recommended a few more conferences to look at but that we'd like to wrap this up soon.
-  
+
+* <2025-07-16 Wed>
+
+- Miquel, Andy, François and Jo present
+
+We started reviewing codes for the artifact evaluation criteria and went fairly slowly through the first codebook for "artefacts wanted".  Tweaked definition of whether code and source code are the same thing and where documentation fits in.
+
+More will be done by me and Andy and we plan to use the next session to do more second coding.

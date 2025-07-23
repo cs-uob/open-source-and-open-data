@@ -147,23 +147,23 @@ Artifacts can be software, mechanical proofs, test suites, benchmarks, or anythi
 Artifacts collected = Artifacts can include models, data files, proprietary binaries, exploits under embargo, etc.
 #+end_verbatim
 
-| Acronym         | Collected                                |
-|-----------------+------------------------------------------|
-| ACM             | data,software,source                     |
-| CHES 2025       | tests,hardware,data,source               |
-| CHI 2024        | demo,data,software,presentation,protocol |
-| CGO 2025        | software,data                            |
-| DSN 2025        | software,data                            |
-| ICFP 2025       | software,tests,data                      |
-| IEEE            | software,data                            |
-| PLDI 2025       | software,tests,data,demo,hardware        |
-| POPL 2025       | software,tests,data                      |
-| USENIX SEC 2025 | data,software                            |
+| Acronym         | Collected                                         |
+|-----------------+---------------------------------------------------|
+| ACM             | data,software,source                              |
+| CHES 2025       | tests,hardware,data,software,source,documentation |
+| CHI 2024        | demo,data,software,presentation,protocol          |
+| CGO 2025        | software,source,data                              |
+| DSN 2025        | source,data                                       |
+| ICFP 2025       | software,tests,data                               |
+| IEEE            | source,data                                       |
+| PLDI 2025       | software,tests,data,demo,hardware                 |
+| POPL 2025       | software,tests,data                               |
+| USENIX SEC 2025 | data,software                                     |
 
 ** Codebook
 
-- source :: Readable source code and scripts as opposed to black-box analysis tools, so that you can see how it did it.
 - hardware :: Full schematics and build instructions of any custom hardware, potentially hardware for archive as well
+- source :: Readable source code and scripts as opposed to black-box analysis tools, so that you can see how it did it.
 - software :: Any software (even proprietary software), mechanized proofs, and dependencies required to demonstrate your results, show the tool you made, with the goal of replicating your results, the software environment to run the code.  There is no expectation that the code ought to be inspectible, just that something ought to run.
 - data :: Input and output datasets from your code to prove your results and support your conclusions.
 - documentation :: What the heck is this?  What do I do with it?
@@ -552,7 +552,344 @@ Remember that the AEC is attempting to determine whether the artifact meets the 
 Documentaion = README instructions: Your artifact package must include an obvious "README" that describes your artifact and provides a road map for evaluation. The README must consist of two sections. A "Getting Started Instructions" section should help reviewers check the basic functionality of the artifact within a short time frame (e.g., within 30 minutes). Such instructions could, for example, be on how to build a system and apply it to a "Hello world"-sized example. The purpose of this section is to allow reviewers to detect obvious problems during the kick-the-tires phase (e.g., a broken virtual machine image). A "Detailed Instructions" section should provide suitable instructions and documentation to fully evaluate the artifact.
 #+end_verbatim
 
-| Acronym   | Codes                               |
-|-----------+-------------------------------------|
-| ICFP 2025 | script,QC,guide,time,infrastructure |
-| PLDI 2025 |                                     |
+| Acronym   | Codes                                                             |
+|-----------+-------------------------------------------------------------------|
+| ICFP 2025 | plaintext,instructions,reproduction,qc,interpretation,definitions |
+| PLDI 2025 | plaintext,instructions,reproduction,qc,definitions                |
+| POPL 2025 | instructions,reproduction,interpretation,warnings,environment,qc  |
+| OSDI 2025 | instructions                                                      |
+
+
+** Codebook
+
+- instructions :: how do you use this artefact?
+- reproduction :: how do I use this to reproduce the claims, results and tables from the paper?
+- qc :: make sure that this is easy for reviewers (e.g. runtimes, expected output, fixing warnings)
+- interpretation :: how should I read the output of this to verify that it produces your results?
+- definitions :: what does all the jargon mean? In the case of a proof, given definitions and lemmas required to understand it
+- plaintext :: the `README` or equivalent should be in an open/plaintext format (markdown, PDF, etc).
+- warnings :: if the artefact can do dangerous things (i.e. reproducing an exploit) this needs to be made clear
+- environment :: describe in detail the system this artefact is designed to be run in (e.g. file layout/system)
+
+
+* Artifact claims
+
+Given this is only OSDI and other conferences do this in the Documentation section merge and use same codebook?
+
+#+begin_src sqlite :results raw :wrap verbatim :line yes
+   select distinct Acronym, "Artifact claims" from data where "Artifact claims" <> "";
+#+end_src
+
+#+RESULTS:
+#+begin_verbatim
+        Acronym = OSDI 2025
+Artifact claims = Artifact claims: Importantly, make your claims about your artifacts concrete. This is especially important if you think that these claims differ from the expectations set up by your paper. The AEC is still going to evaluate your artifacts relative to your paper, but your explanation can help to set expectations up front, especially in cases that might frustrate the evaluators without prior notice. For example, tell the AEC about difficulties they might encounter in using the artifact, or its maturity relative to the content of the paper.
+#+end_verbatim
+
+| Acronym   | Codes           |
+|-----------+-----------------|
+| OSDI 2025 | reproduction,qc |
+
+* Artifact available
+
+Given this is only OSDI and other conferences do this in the Documentation section merge and use same codebook?
+
+#+begin_src sqlite :results raw :wrap verbatim :line yes
+   select distinct Acronym, "Artifact available" from data where "Artifact available" <> "";
+#+end_src
+
+#+RESULTS:
+#+begin_verbatim
+           Acronym = ACM
+Artifact Available = This badge is applied to papers in which associated artifacts have been made permanently available for retrieval.
+Author-created artifacts relevant to this paper have been placed on a publically accessible archival repository. A DOI or link to this repository along with a unique identifier for the object is provided.
+
+
+           Acronym = ACM
+Artifact Available = We do not mandate the use of specific repositories. Publisher repositories (such as the ACM Digital Library), institutional repositories, or open commercial repositories (e.g., figshare or Dryad) are acceptable. In all cases, repositories used to archive data should have a declared plan to enable permanent accessibility. Personal web pages are not acceptable for this purpose.
+
+           Acronym = CHES 2025
+Artifact Available = IACR CHES Artifacts Available: To earn this badge, the AEC must judge that artifacts associated with the paper have been made available for retrieval. Other than making the artifacts available, this badge does not mandate any further requirements on functionality or correctness. This is intended for authors who simply wish to make some supplementary material available that supports their paper. Examples include data sets, large appendices, and other documentation.
+
+           Acronym = CHI 2024
+Artifact Available = Archiving artifacts
+Archiving artifacts alongside our publications is important to improving the transparency, reusability, and extensibility of our work.  We encourage all authors who have research artifacts to upload them using the Final Submission form in PCS, even if the artifact also exists in an online repository like GitHub, BitBucket, or institutional repositories.  Uploading artifacts alongside your paper ensures that these artifacts will be permanently archived in the ACM Digital Library, provides an archival snapshot of your artifact at the time of publication, and makes this discoverable in the same place as your publication.  You can still include links to external repositories, but archiving your artifacts alongside your publications adds additional discoverability and ensures permanent availability. If you have files that exceed upload limits, these can be processed by contacting publications@chi2024.acm.org.
+
+           Acronym = CHI 2024
+Artifact Available = Papers with the “artifact Available” badge include this icon in the ACM Digital Library, are searchable and filterable by this badge, and have this metadata embedded within the article landing page to improve discoverability. ​​
+
+           Acronym = DSN 2025
+Artifact Available = Available: The code and/or datasets, including any associated data and documentation, provided by the authors is reasonable and complete and can potentially be used to support reproducibility of the published results.
+
+           Acronym = DSN 2025
+Artifact Available = Please note that we require that the artifact should be submitted either through Zenodo (https://zenodo.org/) or Figshare (https://figshare.com/). They are two very popular open-access repositories adopted by computer science conferences, which assure long-term archival storage.
+These repositories can provide a DOI, i.e., a fixed, persistent identifier for the artifact, that provides a more stable link than directly using an URL. Please note that the DOI of the artifact should be indicated at the time of paper submission for the research track, even if the artifact is not yet ready. Both Zenodo and Figshare allow users to reserve a DOI, and to upload the actual artifact at a later moment. The DOI will become reachable when the artifact is published. For more information about how to reserve a DOI, please see the following tutorials:
+
+           Acronym = DSN 2025
+Artifact Available = Please note that artifacts should not be submitted through GitHub or other software development platforms. Of course, you are free to also share a copy of your artifact through these platforms, but we require that the artifact is submitted and shared through Zenodo or Figshare for long-term archival storage and better interoperability
+
+           Acronym = DSN 2025
+Artifact Available = For the "Available" badges:
+Is the artifact publicly available through an open-access repository (Zenodo or Figshare)?
+Is the artifact consistent and complete with respect to the paper?
+Does it provide sufficient user documentation (e.g., command-line syntax)?
+Can it potentially be used to support reproducibility of the paper (even if you could not run the artifact)?
+Does it include a license that allows researchers to reuse and extend the artifact (e.g., for comparison purposes in a future paper)? Creative Commons licenses are a typical choice for open data.
+
+           Acronym = ICFP 2025
+Artifact Available = Upload to Zenodo
+Once you have prepared your artifact, upload it to Zenodo to ensure that it will remain publicly accessible in perpetuity. Similar publicly accessible long-term archives are also acceptable (but not GitHub, Docker Hub or your personal website).
+
+           Acronym = ICFP 2025
+Artifact Available = The Artifact available badge is awarded to artifacts that meet at least the quality criteria of the functional badge and that are additionally stored in a long-term, publicly accessible archive. The archive must have a plan for permanent accessibility along the lines of Zenodo’s or FigShare’s policies. Other archives are also accepted, but they must fulfill the two above criteria:
+
+Long-term archival: the archive must ensure that artifacts are available indefinitely. This excludes commercial offerings such as GitHub which make no long-term commitments as well as personal websites.
+Public accessibility: the archive must be freely accessible to the general public.
+
+           Acronym = IEEE
+Artifact Available = 1 Available:
+The code and/or datasets, including any associated data and documentation, provided by the authors is reasonable and complete and can potentially be used to support reproducibility of the published results.
+
+           Acronym = NDSS 2025
+Artifact Available = Available. To earn this badge, the AEC must judge that the artifact associated with the paper has been made available for retrieval permanently and publicly. As an artifact undergoing AE often evolves as a consequence of AEC feedback, authors can use mutable storage for the initial submission, but must commit to uploading their materials to public services (e.g., Zenodo, FigShare, Dryad) for permanent storage backed by a Digital Object Identifier (DOI) if the badge is awarded. The artifact appendix prepared for publication will have to mention the artifact DOI. Authors are welcome to report additional sources, like GitHub and GitLab, that may ease the dissemination of the artifact and possible future updates. .
+
+           Acronym = PLDI 2025
+Artifact Available = Available: This badge is automatically earned by artifacts that are made available publicly in an archival location. We require that artifacts that were evaluated as Functional archive the evaluated version. There are two routes for this:
+Authors upload a snapshot of the complete artifact to Zenodo, which provides a DOI specific to the artifact. Note that Github, etc. are not adequate for receiving this badge (see FAQ), and that Zenodo provides a way to make subsequent revisions of the artifact available and linked from the specific version.
+Authors can work with Conference Publishing to upload their artifacts directly to the ACM, where the artifact will be hosted alongside the paper.
+
+           Acronym = POPL 2025
+Artifact Available = Available: Artifacts which the authors make available eternally on a publicly accessible archival repository such as Zenodo or ACM DL will also receive ACM’s “Artifacts Available” badge. (Note that this is not the same as putting the code on GitHub, GitLab, BitBucket, or your personal website! However, an immutable snapshot does not prevent authors from also distributing their code in another way.) We recommend following this process for all accepted artifacts.
+
+           Acronym = POPL 2025
+Artifact Available = Packaging
+We recommend creating a single web page at a stable URL from which reviewers can download the artifact and which also hosts a README file with instructions for installing and using the artifact. Having a stable URL, instead of uploading an archive, allows you to update the artifact in response to issues that come up.
+We recommend using Zenodo to create the stable URL mentioned above for your artifact at submission time. Not only can you upload multiple versions in response to reviewer comments, you can use the same stable URL when publishing your paper to avoid uploading your artifact twice.
+
+           Acronym = USENIX Sec 2025
+Artifact Available = Artifacts Available: As per the new “Open-Science policy” of USENIX Security, all accepted papers are mandated to qualify for this badge. To earn this badge, the AEC must judge that the artifacts described in the “Open-Science section” of the paper have been made available for retrieval, permanently and publicly. The archived copy of the artifacts must be accessible via a long-term stable reference or DOI. For this purpose, we recommend Zenodo, but other valid hosting options include institutional and third-party digital repositories (e.g., FigShare, Dryad, or Software Heritage). Unlike previous iterations, software development repositories such as GitHub, GitLab, or personal web pages are not acceptable for this badge. Other than making the artifacts available, this badge does not mandate any further requirements on functionality, correctness, or documentation.
+
+           Acronym = USENIX Sec 2025
+Artifact Available = Phase-1: Artifacts Available
+Phase-1 AE is mandatory for all papers that get accepted to USENIX Security ‘25. In this phase, the AEC will assess and ensure that the artifacts are in compliance with the “Artifacts Available” badge requirements. The authors need to submit a permanent link to their artifacts hosted on recommended platforms (e.g., Zenodo, FigShare, Dryad, Software Heritage)
+
+           Acronym = NISO
+Artifact Available = 2.1 Open Research Objects (ORO)
+This badge signals that author-created digital objects used in the research (including data and code) are permanently archived in a public repository that assigns a global identifier and guarantees persistence, and are made available via standard open licenses that maximize artifact availability.
+If all relevant research objects are made available, the badge is designated by a modifier, e.g., ORO-A. This badge signals that the research publication is reproducible (as described in the NASEM Report).
+Notes:
+1. This is akin to author-supplied supplemental materials, shared under a standard public license such as an Open Science Initiative (OSI)–approved license for software or a Creative Commons license or public domain dedication for data and other materials.
+2. This definition corresponds to the Association for Computing Machinery (ACM) “Artifacts Available” badge, and to the combined Center for Open Science (COS) “Open Data” and “Open Materials” (pertaining to digital objects) badges. (See Appendix A.)
+3. The determination of what objects are “relevant” to a research publication is in the hands of the editorial board or leadership members of the community, in addition to the authors themselves.
+4. For physical objects relevant to the research, the metadata about the object should be made available.
+
+           Acronym = OSDI 2025
+Artifact Available = Artifacts Available: To earn this badge, the AEC must judge that the artifacts associated with the paper have been made available for retrieval, permanently and publicly. We encourage authors to use Zenodo, which is a publicly-funded long-term storage platform that also assigns a DOI for your artifact. Other valid hosting options include institutional repositories and third-party digital repositories (e.g., FigShare, Dryad, Software Heritage, GitHub, or GitLab—not personal webpages). Other than making the artifacts available, this badge does not mandate any further requirements on functionality, correctness, or documentation.
+#+end_verbatim
+
+| Acronym         | Codes                                 |
+|-----------------+---------------------------------------|
+| ACM             | archived,doi                          |
+| CHES 2025       | supplementary                         |
+| CHI 2024        | archived                              |
+| DSN 2025        | archived,doi,documented,relevant,open |
+| ICFP 2025       | archived,functional                   |
+| IEEE            | relevant                              |
+| NDSS 2025       | archived,doi                          |
+| PLDI 2025       | archived                              |
+| POPL            | archived                              |
+| USENEX Sec 2025 | archived,doi                          |
+| NISO            | archived,doi,open,metadata            |
+| OSDI 2025       | archived,doi                          |
+
+** Codebook
+
+- archived :: the artefact should be stored immutably and permenantly by a proper archival service
+- supplementary :: the artefact can be stored wherever, it is soley for making additional material available
+- doi :: the artefact should have an identifier that is permenant
+- relevant :: as well as being available an artifact ought to support reproducibility or reusability
+- open :: an open license ought to be used
+- functional :: the artifact works
+- metadata :: data about the artifact should be available
+
+  
+* Virtual Environments
+
+#+begin_src sqlite :results raw :wrap verbatim :line yes
+   select distinct Acronym, "Virtual Environments" from data where "Virtual Environments" <> "";
+#+end_src
+
+#+RESULTS:
+#+begin_verbatim
+             Acronym = CGO 2025
+Virtual Environments = For the artifact itself, we strongly encourage the use of a container or VM technologies like Docker, Singularity, Virtual Box or Vagrant to package the artifact in one stand-alone container or VM which provides all required dependencies.
+
+             Acronym = DSN 2025
+Virtual Environments = Additional suggestions:
+You are allowed to provide your artifact as a virtual machine. Even in that case, you should still provide source code and scripts that were used to build the virtual machine.
+Please minimize the number of dependencies and the amount of hardware resources needed to run the artifact.
+Please provide clear step-by-step instructions to install and run the artifacts. Remember to test them on a clear environment!
+When providing instructions to users and reviewers, please provide the expected outputs (or any other side effect) of these instructions, and the estimated amount of human and compute time.
+
+             Acronym = ICFP 2025
+Virtual Environments = Software installed into a virtual machine (VM) image provided by the committee. See this page for details.
+
+             Acronym = ICFP 2025
+Virtual Environments = We provide a VM image that you may use as a base for your own VM image. If you wish to use this image, follow the instructions in the next section. If you wish to create your own VM image from scratch, follow the instructions further down below.
+
+             Acronym = POPL 2025
+Virtual Environments = We recommend (but do not require) packaging your artifact as a virtual machine image. Virtual machine images avoid some issues with differing operating systems, versions, or dependencies. Other options for artifacts (such as source code, binary installers, web versions, or screencasts) are acceptable but generally cause more issues for reviewers and thus more issues for you. Virtual machines also protect reviewers from malfunctioning artifacts damaging their computer. We recommend VirtualBox 7.1, a free and actively maintained virtual machine host software; see more details below.
+
+Plain software (recommend in some cases): It is appropriate not to use a virtual machine in cases where the software has very few dependencies and requires only a working installation of a single programming language or package manager – e.g., Cargo or OPAM. In these cases, please document the installation of your artifact and required version(s) of everything via clear, step-by-step instructions. Additionally, make sure to test the instructions yourself on a fresh machine without any software installed. If the reviewers are unable to replicate your setup during the kick-the-tires phase, they may ask you to provide a virtual machine.
+
+VirtualBox instructions (recommended): As of fall 2023, VirtualBox still had some issues with running on newer ARM-based Macs (M1/M2/M3). For this reason, please ensure you are using at least version 7.1 (released in September 2024), which now supports macOS/Arm virtualization. As a safety precaution, the submission form will also ask authors to clarify whether their artifact was built/tested on Apple Silicon. Recent graphical Linux releases, such as Ubuntu 20.04 LTS, are good choices for the guest OS: the reviewer can easily navigate the image or install additional tools, and the resulting virtual machines are not too large to download.
+
+Docker instructions (not recommended): If you use Docker, be warned that Docker images are not fully cross-platform out-of-the-box! Due to cross-platform compatibility issues on M1/M2/M3 Macs, Docker builds a separate image depending on the target platform, and may fail to run on a different machine. For these reasons, we do not recommend using Docker. If you choose to use Docker, see this (more complicated) process to bundle multiple-platform images.
+
+             Acronym = OSDI 2025
+Virtual Environments = Virtual machine/container: A virtual machine or Docker image containing the software application already set up with the right toolchain and intended runtime environment. For example:
+For raw data, the VM would contain the data and the scripts used to analyze it.
+For a mobile phone application, the VM would have a phone emulator installed.
+For mechanized proofs, the VM would contain the right version of the relevant theorem prover. We recommend using a format that is easy for AEC members to work with, such as OVF or Docker images. An AWS EC2 instance is also possible.
+#+end_verbatim
+
+| Acronym   | Codes                           | Notes                                                       |
+|-----------+---------------------------------+-------------------------------------------------------------|
+| CGO 2025  | standalone,vm,tech              |                                                             |
+| DSN 2025  | standalone,meta,instructions,vm |                                                             |
+| ICFP 2025 | vm,tech?                        | They recommend their own base vm image but no specific tech |
+| POPL 2025 | vm?,instructions,tech           | They strongly recommend a VM but its up to you.             |
+| OSDI 2025 | standalone,vm                   |                                                             |
+
+** Codebook
+
+- standalone :: the artifact ought to be packaged in a VM/container to run it that does not require dependencies
+- meta :: their ought to be instructions to recreate the VM the artifact runs in, independent of whether the VM is part of the artifact
+- instructions :: their ought to be instructions on how to use and/or install the artifact in the VM
+- vm :: it ought to be in a vm
+- tech :: they recommend (or discourage) specific technologies and discourage others.  More than a VM, but a VirtualBox VM.  More than a container but preferably not a Docker Container.
+
+* Artifact Functional Review
+
+#+begin_src sqlite :results raw :wrap verbatim :line yes
+  select distinct Acronym, "Artifact Functional review" from data where "Artifact Functional review" <> "";
+#+end_src
+
+#+RESULTS:
+#+begin_verbatim
+                   Acronym = ACM
+Artifact Functional review = Functional v1.1
+The artifacts associated with the research are found to be documented, consistent, complete, exercisable, and include appropriate evidence of verification and validation.
+
+                   Acronym = CHES 2025
+Artifact Functional review = IACR CHES Artifacts Functional: To earn this badge, the AEC must judge that the artifacts conform to the expectations set by the paper in terms of functionality, usability, and relevance. The AEC will consider four aspects of the artifacts in particular.
+Documentation: are the artifacts sufficiently documented to enable them to be exercised by readers of the paper?
+Completeness: do the submitted artifacts include all of the key components described in the paper?
+Exercisability: do the submitted artifacts include the scripts and data needed to run the experiments described in the paper, and can the software be successfully executed?
+Reusability: means that the artifacts are not just functional but of sufficient quality that they could be extended and reused by others.
+
+                   Acronym = CGO 2025
+Artifact Functional review = Is the artifact functional?
+Package complete? Are all components relevant to the evaluation included in the package?
+Well documented? Is the documentation enough to understand, install, and evaluate the artifact?
+Exercisable? Does it include scripts and/or software to perform appropriate experiments and generate results?
+Consistent? Are artifacts relevant to the associated paper and contribute in some inherent way to the generation of its main results?
+The artifacts associated with the paper will receive an “Artifacts Evaluated - Functional” badge only if they are found to be documented, consistent, complete, exercisable, and include appropriate evidence of verification and validation.
+
+                   Acronym = DSN 2025
+Artifact Functional review = Reviewed: The code and/or datasets, including any associated data and documentation, provided by the authors is reasonable and complete, runs to produce the outputs described, and can support reproducibility of the published results.
+
+                   Acronym = DSN 2025
+Artifact Functional review = For the "Reviewed" badges:
+Does the artifact include enough documentation about configuration and installation (e.g., on external dependencies, supported environments)?
+Does it include instructions for a "minimum working example", and could you run it?
+Does the artifact include documentation about its internals (e.g., organization of modules and folders, code comments for explaining non-obvious code) that is understandable for other researchers?
+
+                   Acronym = ICFP 2025
+Artifact Functional review = Consistency and Completeness
+The artifact should directly implement or support the technical content of the paper (consistency). It should validate any claims made in the paper about the artifact or, if there are no explicit claims in the paper, any claims that one would expect to be validated (completeness).
+
+For programs, the program should work as described in the paper. The program may be an extended version of the one described in the paper, but all examples discussed in the paper should run with at most minimal and clearly documented changes.
+For benchmarks, the results obtained by running the benchmarks should be consistent (within the expected variance) with the results reported in the paper. All graphs, tables, etc. should be reproducible. Exceptions are possible, e.g., when a benchmark takes a very long time to run. We expect such exceptions to be clearly documented.
+For formal proofs, the proved statements should match those from the papers. Axioms or incomplete proofs are acceptable if they are documented in the paper.
+
+                   Acronym = ICFP 2025
+Artifact Functional review = Exercisability
+It should be possible to reproduce the artifact’s contribution in any commonly used environment. For executable artifacts, this requirement is satisfied if the artifact is packaged as a VM image containing all relevant software and data sets (as described in the submission guidelines). If external data are required, it should be clear how to access them.
+
+This requirement does not apply to artifacts which necessarily require a non-standard environment, e.g., special hardware or large amounts of computing power. But if at all possible, the artifact should still allow reviewers to partially verify the artifact, for example by
+
+providing simulators for special hardware;
+providing anonymous remote access to special hardware or compute clusters;
+providing downscaled versions of the artifact which can be run on standard hardware.
+Authors of such artifacts should contact us already before the submission to discuss these issues.
+
+                   Acronym = IEEE
+Artifact Functional review = 2 Reviewed:
+The code and/or datasets, including any associated data and documentation, provided by the authors is reasonable and complete, runs to produce the outputs described, and can support reproducibility of the published results.
+
+                   Acronym = NDSS 2025
+Artifact Functional review = Functional. To earn this badge, the AEC must judge that the artifact conforms to the expectations set by the paper for functionality, usability, and relevance. Also, an artifact must be usable on other machines than the authors’, including cases where specialized hardware is required (for example, paths, addresses, and identifiers must not be hardcoded.) The AEC will particularly consider three aspects:
+Documentation: is the artifact sufficiently documented to be exercised by readers of the paper?
+Completeness: does the submitted artifact include all of the key components described in the paper?
+Exercisability: does the submitted artifact include the scripts and data needed to run the experiments described in the paper, and can the software be successfully executed?
+
+                   Acronym = PLDI 2025
+Artifact Functional review = Functional: This is the basic “accepted” outcome for an artifact. An artifact can be awarded a functional badge if the artifact supports all claims made in the paper, possibly excluding some minor claims if there are very good reasons they cannot be supported. In the ideal case, an artifact with this designation includes all relevant code, dependencies, input data (e.g., benchmarks), and the artifact’s documentation is sufficient, in principle, for reviewers to reproduce the exact results described in the paper. If the artifact claims to outperform a related system in some way (in time, accuracy, etc.) and the other system was used to generate new numbers for the paper (e.g., an existing tool was run on new benchmarks not considered by the corresponding publication), artifacts should include a version of that related system, and instructions for reproducing the numbers used for comparison as well. If the alternative tool crashes on a subset of the inputs, simply note this expected behavior.
+
+                   Acronym = PLDI 2025
+Artifact Functional review = Some of the results are performance data, and therefore exact numbers depend on the particular hardware. In this case, artifacts should explain how to recognize when experiments on other hardware reproduce the high-level results (e.g., that a certain optimization exhibits a particular trend, or that comparing two tools one outperforms the other in a certain class of cases).
+In some cases repeating the evaluation may take a long time. Reviewers may not reproduce full results in such cases.
+
+                   Acronym = POPL 2025
+Artifact Functional review = Functional and Reusable: Artifacts that can be shown to support the claims made in the paper, with sufficient documentation towards running the artifact and validating those claims, are awarded the “Artifacts Evaluated - Functional” badge. Those which additionally are packaged in a way that enables ease of reuse – including but not limited to good documentation, good installation instructions, platform compatibility, ease of running the tool on other examples not in the paper, and making the code available via open source licensing and/or an open issue tracker (e.g. GitHub, GitLab, or BitBucket) will be additionally awarded the “Artifacts Evaluated - Reusable” badge. Per ACM policy, papers will receive at most one of the Reusable and Functional badges.
+
+                   Acronym = USENIX Sec 2025
+Artifact Functional review = Artifacts Functional: To earn this badge, the AEC must judge that the artifacts conform to the expectations set by the paper in terms of functionality, usability, and relevance. In short, do the artifacts work, and are they useful for producing outcomes associated with the paper? The AEC will consider three aspects of the artifacts in particular:
+Documentation: are the artifacts sufficiently documented to enable them to be exercised by readers of the paper?
+Completeness: do the submitted artifacts include all of the key components described in the paper?
+Exercisability: do the submitted artifacts include the scripts and data needed to run the experiments described in the paper, and can the software be successfully executed?
+
+                   Acronym = USENIX Sec 2025
+Artifact Functional review = Artifact Functional
+The artifact has a “read me” file with high-level documentation:
+- A description, such as which folders correspond to code, benchmarks, data, …
+- A list of supported environments, including OS, specific hardware if necessary, …
+- Compilation and running instructions, including dependencies and pre-installation steps, with a reasonable degree of automation such as scripts to download and build exotic dependencies
+- Configuration instructions, such as selecting IP addresses or disks
+- Usage instructions, such as analyzing a new data set
+- Instructions for a “minimal working example”
+- The artifact has documentation explaining the high-level organization of modules, and code comments explaining non-obvious code, such that other researchers can fully understand it
+- The artifact contains all components the paper describes using the same terminology as the paper, and no obsolete code/data
+- If the artifact includes a container/VM, it must also contain a script to create it from scratch
+Artifacts must be usable on other machines than the authors’, though they may require hardware such as specific network cards. Information such as IP addresses must not be hardcoded.
+
+                   Acronym = OSDI 2025
+Artifact Functional review = Artifacts Functional: To earn this badge, the AEC must judge that the artifacts conform to the expectations set by the paper in terms of functionality, usability, and relevance. In short, do the artifacts work and are they useful for producing outcomes associated with the paper? The AEC will consider three aspects of the artifacts in particular.
+Documentation: are the artifacts sufficiently documented to enable them to be exercised by readers of the paper?
+Completeness: do the submitted artifacts include all of the key components described in the paper?
+Exercisability: do the submitted artifacts include the scripts and data needed to run the experiments described in the paper, and can the software be successfully executed?
+#+end_verbatim
+
+| Acronym         | Codes                                        |
+|-----------------+----------------------------------------------|
+| ACM             | documented,consistent,exercisable,verifiable |
+| CHES 2025       | consistent,documented,exercisable,reusable   |
+| CGO 2025        | consistent,reusable,exercisable              |
+| DSN 2025        | consistent,documented                        |
+| ICFP 2025       | consistent,exercisable,verifiable,documented |
+| IEEE            | consistent                                   |
+| NDSS 2025       | consistent,exercisable,documented            |
+| PLDI 2025       | consistent,verifiable,                       |
+| POPL 2025       | consistent,reusable,documented               |
+| USENIX Sec 2025 | documented,exercisable                       |
+| OSDI 2025       | consistent,exercisable                       |
+
+** Codebook
+
+- documented :: it says what it is
+- consistent :: it does what it says, and is complete with respect to those claims
+- exercisable :: you can run it
+- verifiable :: you can check it did what it said it did
+- reusable :: you can use this to do stuff with
+  
